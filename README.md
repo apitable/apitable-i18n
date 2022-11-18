@@ -5,7 +5,7 @@ APITable i18n Generator is a a simple / easy-to-use / lightweight internationali
 It provides:
 
 - Use APITable to visual edit i18n strings.
-- Use `APITable Settings Generator` to generate JSON settings.
+- Use [`APITable Settings Generator`](https://github.com/apitable/apitable-settings-generator) to generate JSON settings.
 - Use `Java` and `TypeScript` SDK as an i18n runtime.
 
 
