@@ -62,3 +62,11 @@ dependencies {
    compile group: 'com.apitable', name: 'i18n', version: '1.0.0'
 }
 ```
+
+
+## Development
+
+```
+yarn
+yarn build
+```
