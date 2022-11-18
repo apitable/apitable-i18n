@@ -1,0 +1,1 @@
+# apitable-i18n-generator
