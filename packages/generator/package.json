@@ -1,0 +1,11 @@
+{
+  "name": "apitable-i18n-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "APITable PTE. LTD <support@apitable.com>",
+  "license": "ISC"
+}

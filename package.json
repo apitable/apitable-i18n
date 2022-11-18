@@ -1,0 +1,13 @@
+{
+    "private": true,
+    "name": "apitable-i18n-generator",
+    "engines": {
+        "node": "^16.15.0"
+    },
+    "scripts": {
+        "build": "yarn workspace generator build && yarn workspace sdk build"
+    },
+    "workspaces": ["packages/*"],
+    "dependencies": {
+    }
+}
