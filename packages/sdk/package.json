@@ -1,13 +1,9 @@
 {
   "name": "@apitable/i18n",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "i18n Locales with APITable power.",
-  "main": "./dist/index.js",
-  "bin": {
-    "asg": "./bin/index.js",
-    "apitable-settings-generator": "./bin/index.js"
-  },
-  "types": "./types/index.d.ts",
+  "main": "./dist/lib/index.js",
+  "types": "./types/lib/index.d.ts",
   "files": [
     "dist",
     "types"
