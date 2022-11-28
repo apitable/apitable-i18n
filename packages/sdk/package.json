@@ -13,7 +13,7 @@
     "types"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "cp ../../README.md ./ && tsc",
     "test": "jest --coverage tests"
   },
   "repository": {
