@@ -1,0 +1,24 @@
+name: npm-publish
+on: push
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    
+    defaults:
+      run:
+        working-directory: packages/sdk
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.15.0
+      - run: yarn
+      - run: yarn test
+      - run: yarn build
+      - shell: bash
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set _authToken=$NPM_TOKEN
+          npm publish --access public 2>&1 > /dev/null || :
