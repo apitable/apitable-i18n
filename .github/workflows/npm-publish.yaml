@@ -21,4 +21,4 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm config set _authToken=$NPM_TOKEN
-          npm publish --access public
+          npm publish --access public 2>&1 > /dev/null || :
