@@ -15,10 +15,10 @@ jobs:
           node-version: 16.15.0
       - run: yarn
       - run: yarn test
-      - shell: cmd
+      - run: yarn build
+      - shell: bash
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          yarn build 
           npm config set _authToken=$NPM_TOKEN
           npm publish --access public
