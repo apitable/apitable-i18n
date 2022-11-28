@@ -4,6 +4,7 @@ on: push
 jobs:
   publish:
     runs-on: ubuntu-latest
+    
     defaults:
       run:
         working-directory: packages/sdk
@@ -14,8 +15,10 @@ jobs:
           node-version: 16.15.0
       - run: yarn
       - run: yarn test
-      - run: yarn build
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          access: public
+      - shell: cmd
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          yarn build 
+          npm config set _authToken=$NPM_TOKEN
+          npm publish --access public
