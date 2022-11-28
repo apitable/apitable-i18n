@@ -1,6 +1,6 @@
 # apitable-i18n-generator
 
-APITable i18n Generator is a a simple / easy-to-use / lightweight internationalization tool.
+`APITable i18n` is a a simple / easy-to-use / lightweight internationalization tool.
 
 It provides:
 
@@ -9,7 +9,7 @@ It provides:
 - Use `Java` and `TypeScript` SDK as an i18n runtime.
 
 
-APITable i18n generator has these advantages:
+`APITable-i18n` has these advantages:
 
 - WYSIWYG: Edit multi-languages on APITable's spreadsheet experience.
 - Slim: Few codes and small.
@@ -39,13 +39,13 @@ Then you will get:
 
 Install APITable i18n generator:
 ```bash
-npm i --save apitable-i18n
+npm i --save @apitable/i18n
 ```
 
 Import to your project:
 
 ```typescript
-import { I18N } from 'apitable-i18n';
+import { I18N } from '@apitable/i18n';
 const languagePacks = require('locales.json');
 const i18n = I18N.createByLanguagePacks(languagePacks, getLanguage());
 
