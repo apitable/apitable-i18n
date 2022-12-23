@@ -13,10 +13,10 @@ export class I18N {
 
   /**
    * I18N factory that create a I18N object with static languages packs json data.
-   * 
-   * @param langPkgs 
-   * @param defaultLang 
-   * @returns 
+   *
+   * @param langPkgs
+   * @param defaultLang
+   * @returns
    */
   static createByLanguagePacks(langPkgs: ILanguagePacks, defaultLang = DEFAULT_LANG): I18N {
     const loader = new DefaultLanguagePackLoader(langPkgs);
@@ -33,8 +33,8 @@ export class I18N {
 
   /**
    * set current language
-   * 
-   * @param language 
+   *
+   * @param language
    */
   public setLanguage(language: string) {
     this._language = language;
@@ -49,7 +49,7 @@ export class I18N {
 
   /**
   * multi-language get, pass key as arguments
-  * @param stringKey map the language pack json data 
+  * @param stringKey map the language pack json data
   * @param options JavaScript Object,  support string format, support lodash _.template
   * @example i18n.getText('early_bird')
   */
@@ -60,7 +60,11 @@ export class I18N {
     if (!languagePack) throw new LanguagePackNotFoundError('cannot find language: ' + this._language);
 
     const text = languagePack[stringKey];
-    if (!text) throw new StringNotFoundError(`Cannot find string key: ${stringKey}`);
+    // if (!text) throw new StringNotFoundError(`Cannot find string key: ${stringKey}`);
+    if (!text) {
+      console.log(`Cannot find string key: ${stringKey}`);
+      return ''
+    };
 
     const str = options ? template(text)(options) : text;
     if (isPlural) {
